@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Detail</title>
+</head>
+<body>
+    <h1>Request Detail</h1>
+    <p>Type: {{ request.request_type }}</p>
+    <p>Details: {{ request.details }}</p>
+    <p>Status: {{ request.status }}</p>
+    <p>Submitted At: {{ request.submitted_at }}</p>
+    <p>Resolved At: {{ request.resolved_at }}</p>
+    {% if request.attachment %}
+    <p>Attachment: <a href="{{ request.attachment.url }}">Download</a></p>
+    {% endif %}
+</body>
+</html>
